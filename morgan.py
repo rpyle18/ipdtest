@@ -6,28 +6,27 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'The name the team gives to itself' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
+team_name = 'Morgan5Wilson' # Only 10 chars displayed.
+strategy_name = 'Playing it safe.'
+strategy_description = 'As long as my score is higher I will always collude'
     
 def move(my_history, their_history, my_score, their_score):
-    ''' Arguments accepted: my_history, their_history are strings.
-    my_score, their_score are ints.
     
-    Make my move.
-    Returns 'c' or 'b'. 
-    '''
-
-    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
-    # their_history: a string of the same length as history, possibly empty. 
-    # The first round between these two players is my_history[0] and their_history[0].
-    # The most recent round is my_history[-1] and their_history[-1].
-    
-    # Analyze my_history and their_history and/or my_score and their_score.
-    # Decide whether to return 'c' or 'b'.
-    
+    if my_score => their_score
+        return 'c'
+        if 
+     
     return 'c'
-
+   
+    # Arguements Accepted:  my_history, their_history are strings; my_score, their_score are ints
+    # my_history:           a string with one letter (c or b) per round that has been played with this opponent.
+    # their_history:        a string of the same length as history, possibly empty. 
+    # first round:          my_history[0] and their_history[0].
+    # most recent round:    my_history[-1] and their_history[-1].
+    # Analyze my_history and their_history and/or my_score and their_score.
+    # Make my move;         Returns 'c' or 'b'. 
+    # c =                   COLLUDE
+    # b =                   BETRAY
     
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
