@@ -66,9 +66,3 @@ if __name__ == '__main__':
               my_score=0, 
               their_score=0,
               result='b')             
-              
-def move(their_history) 
-    if their_history = betray 
-        print betray
-    elce 
-        print collude
