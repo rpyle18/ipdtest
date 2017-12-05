@@ -7,7 +7,7 @@
 ####
 
 team_name = 'max' # Only 10 chars displayed.
-strategy_name = 'Never take Ls '
+strategy_name = 'Never take Ls'
 strategy_description = 'always betray'
     
 def move(my_history, their_history, my_score, their_score):
@@ -32,8 +32,8 @@ def move(my_history, their_history, my_score, their_score):
             return 'b'
         elif their_history == 'c':
             return 'b'
-    return move
-    
+        else:
+            return 'b'
     
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
