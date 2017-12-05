@@ -7,7 +7,7 @@
 ####
 
 team_name = 'Me, Myself, And I' # Only 10 chars displayed.
-strategy_name = 'Tit fo tat'
+strategy_name = 'Tit for tat'
 strategy_description = 'Do exactly as the oppenet?'
     
 def move(my_history, their_history, my_score, their_score):
@@ -25,7 +25,10 @@ def move(my_history, their_history, my_score, their_score):
     
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
-    
+    if their_history == 'b':
+        return 'b'
+    elif their_history == 'c':
+        return 'c'
     return 'c'
 
     
@@ -65,4 +68,5 @@ if __name__ == '__main__':
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
               their_score=0,
-              result='b')             
+              result='b')
+
