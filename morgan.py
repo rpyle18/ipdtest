@@ -16,14 +16,8 @@ def move(my_history, their_history, my_score, their_score): #positiveresults
     list = ('c', 'b')
     if my_score > their_score:
         return 'c'
-        if my_score <their_score:
-            return 'c'
-            if their_history[-1] == 'c':
-                return 'c'
-                if my_history[-1] =='c':
-                    return 'c'
-                else:
-                    return random.choice(list)
+    else:
+        return random.choice(list)
 
     
     #################################################################################################################
