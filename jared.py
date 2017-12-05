@@ -19,7 +19,7 @@ def move(my_history, their_history, my_score, their_score):
     '''
     while len(my_history) < 10:
         return 'b'
-    if their_history[0,1,2,3,4,5,6,7,8,9] == ['c', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b']:
+    if their_history[0:9] == ['c', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b']:
         return 'c'
         
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.

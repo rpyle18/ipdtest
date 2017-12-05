@@ -12,7 +12,7 @@ strategy_description = 'As long as my score is higher I will always collude.'
 
 
 def move(my_history, their_history, my_score, their_score): #positiveresults
-    import random
+    '''import random
     list = ('c', 'b')
     if my_score > their_score:
         return 'c'
@@ -23,7 +23,8 @@ def move(my_history, their_history, my_score, their_score): #positiveresults
                 if my_history[-1] =='c':
                     return 'c'
                 else:
-                    return random.choice(list)
+                    return random.choice(list)'''
+    return 'c'
 
     
     #################################################################################################################

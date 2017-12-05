@@ -17,11 +17,13 @@ def move(my_history, their_history, my_score, their_score):
     Make my move.
     Returns 'c' or 'b'. 
     '''
-    while 1 == 1:
+    
+    '''while 1 == 1:
         if their_history == 'b':
             move = 'c'
         elif their_history == 'c':
             move = 'b'
+    '''
             
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
     # their_history: a string of the same length as history, possibly empty. 
@@ -31,7 +33,7 @@ def move(my_history, their_history, my_score, their_score):
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
     
-    return move
+    return 'c'
 
     
 def test_move(my_history, their_history, my_score, their_score, result):

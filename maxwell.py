@@ -27,12 +27,13 @@ def move(my_history, their_history, my_score, their_score):
     # Decide whether to return 'c' or 'b'.
     
     
-    while 1==1:
+    ''''while 1==1:
         if their_history == 'b':
             return 'b'
         elif their_history == 'c':
             return 'b'
-    return move
+    return move'''
+    return 'c'
     
     
 def test_move(my_history, their_history, my_score, their_score, result):
