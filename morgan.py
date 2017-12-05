@@ -10,7 +10,9 @@ team_name = 'Morgan5Wilson' # Only 10 chars displayed.
 strategy_name = 'Playing it safe.'
 strategy_description = 'As long as my score is higher I will always collude.'
     
-def move(my_history, their_history, my_score, their_score): #positiveresults               # -----+('.'<)
+def move(my_history, their_history, my_score, their_score): #positiveresults
+    import random
+    list = ('c', 'b')
     if my_score > their_score:
         return 'c'
         if my_score <their_score:
@@ -20,12 +22,8 @@ def move(my_history, their_history, my_score, their_score): #positiveresults    
                 if my_history[-1] =='c':
                     return 'c'
                 else:
-                    return random()
+                    return random.choice(list)
 
-def random():
-    what_the_heck_why_not = 'true'
-    if what_the_heck_why_not = 'true'
-        return random.choice()
     
     #################################################################################################################
     # Arguements Accepted:  my_history, their_history are strings; my_score, their_score are ints                   #
