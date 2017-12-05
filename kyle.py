@@ -14,10 +14,7 @@ strategy_description = 'If they have betrayed recently then retaliate, if not th
 def move(my_history, their_history, my_score, their_score):
     if their_history[-10:] == 'b':
         if my_score - 600 >= their_score:
-            if their_history[-10:] == 'b':
-                return 'b'
-            else:
-                return 'c'
+            return 'c'
         else:
             if random.random()<0.1:
                 return 'b'
