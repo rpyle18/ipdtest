@@ -7,7 +7,7 @@
 ####
 
 team_name = 'Me, Myself, And I' # Only 10 chars displayed.
-strategy_name = 'Tit fo tat'
+strategy_name = 'Tit for tat'
 strategy_description = 'Do exactly as the oppenet?'
     
 def move(my_history, their_history, my_score, their_score):
