@@ -9,7 +9,8 @@
 team_name = 'Morgan5Wilson' # Only 10 chars displayed.
 strategy_name = 'Playing it safe.'
 strategy_description = 'As long as my score is higher I will always collude.'
-    
+move = 'c'
+
 def move(my_history, their_history, my_score, their_score): #positiveresults
     import random
     list = ('c', 'b')
