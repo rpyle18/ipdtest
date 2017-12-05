@@ -7,7 +7,7 @@
 ####
 
 team_name = 'Sam' # Only 10 chars displayed.
-strategy_name = 'Collude always unless betrayed then always betray.'
+strategy_name = 'Collude until betrayed.'
 strategy_description = 'It will always collude unless betryed by the other player'
     
 def move(my_history, their_history, my_score, their_score):
