@@ -4,20 +4,24 @@
     #     strategy_name: a string                   #
     #     strategy_description: a string            #
     #     move: A function that returns 'c' or 'b'  #
-    #################################################
-
-team_name = 'Morgan5Wilson' # Only 10 chars displayed.
-strategy_name = 'Playing it safe.'
+    #################################               #
+                                    #               ###########
+team_name = 'Morgan5Wilson'         # Only 10 chars displayed.#
+strategy_name = 'Playing it safe.'  ###########################
 strategy_description = 'As long as my score is higher I will always collude.'
 
 
-def move(my_history, their_history, my_score, their_score): #positiveresults
+def move(my_history, their_history, my_score, their_score):
     import random
     list = ('c', 'b')
     if my_score > their_score:
         return 'c'
     else:
         return random.choice(list)
+        if their_score > my_score:
+            return 'b'
+            else:
+                return 'c'
 
     
     #################################################################################################################
@@ -61,7 +65,7 @@ if __name__ == '__main__':
     test_move(my_history= 'bbb',
               their_history= 'ccc', 
             
-            ##################################################################### 
+            #####################################################################
             # Note the scores are for testing move()                            #
             # The history and scores don't need to match unless                 #
             # that is relevant to the test of move(). Here,                     #
