@@ -39,10 +39,11 @@ import example8
 import austin, ben, braeden, brayden, caleb, chase, cole
 import derek, ethan, haley, jacob, jared, jessiria, joseph
 import kyle, maxwell, merik, morgan, sam, shane, spencer, zachary
+import pyle
 betray = example1
 collude = example0
 
-modules = [example0, example1, example2, example3, example4, example5, example6, example7, example8, austin, ben, braeden, brayden, caleb, chase, cole, derek, ethan, haley, jacob, jared, jessiria, joseph, kyle, maxwell, merik, morgan, sam, shane, spencer, zachary]
+modules = [example0, example1, example2, example3, example4, example5, example6, example7, example8, austin, ben, braeden, brayden, caleb, chase, cole, derek, ethan, haley, jacob, jared, jessiria, joseph, kyle, maxwell, merik, morgan, sam, shane, spencer, zachary, pyle]
 for module in modules:
     reload(module)
     print ('reloaded',module)
@@ -377,5 +378,5 @@ def post_to_file(string, filename='tournament.txt', directory=''):
  
 ### Call main_play() if this file is executed
 if __name__ == '__main__':
-    scores, moves, reports = main_play([example0, example1, example2, example3])   
-    section0, section1, section2, section3 = reports
+    scores, moves, reports = main_play([austin, ben, braeden, brayden, caleb, chase, cole, derek, ethan, haley, jacob, jared, jessiria, joseph, kyle, maxwell, merik, morgan, sam, shane, zachary, pyle])   
+    section0, section1, section2, section3 = reports 
