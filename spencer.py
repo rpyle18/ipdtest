@@ -11,11 +11,14 @@ strategy_name = 'tit for tat'
 strategy_description = 'does what the other players previous move was'
     
 def move(my_history, their_history, my_score, their_score):
-    if 'b' == their_history:
+    # first move
+    if len(their_history) == 0:
         return 'b'
-    elif 'c' == their_history:
+        
+    if 'b' == their_history[-1]:
+        return 'b'
+    else:
         return 'c'
-    return 'c'
     
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
