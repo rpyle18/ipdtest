@@ -380,3 +380,4 @@ def post_to_file(string, filename='tournament.txt', directory=''):
 if __name__ == '__main__':
     scores, moves, reports = main_play([austin, ben, braeden, brayden, caleb, chase, cole, derek, ethan, haley, jacob, jared, jessiria, joseph, kyle, maxwell, merik, morgan, sam, shane, spencer, zachary, pyle])   
     section0, section1, section2, section3 = reports 
+
