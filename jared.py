@@ -20,6 +20,7 @@ def move(my_history, their_history, my_score, their_score):
 
     while len(my_history) < 10:
         return 'b'
+<<<<<<< HEAD
     if their_history[0,1,2,3,4,5,6,7,8,9] == ['c', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b']:
         pickrand = random.randint(0,100)
         if pickrand <= 50:
@@ -34,6 +35,11 @@ def move(my_history, their_history, my_score, their_score):
     else:
         return 'b'
             
+=======
+    if their_history[0:9] == ['c', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b']:
+        return 'c'
+        
+>>>>>>> 30c9ce8914e0e30a42f2d45ebdbaf8842cb25078
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
     # their_history: a string of the same length as history, possibly empty. 
     # The first round between these two players is my_history[0] and their_history[0].

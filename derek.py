@@ -6,9 +6,9 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'The name the team gives to itself' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
+team_name = 'Derek' # Only 10 chars displayed.
+strategy_name = 'TTFT then betray'
+strategy_description = 'Initally collude. Then copy the opponents last two moves if they were the same, or betray if they were not. Lastly, after 75 moves, betray, then betray if opponent\'s betray count is between 0 and 3.'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
@@ -25,8 +25,30 @@ def move(my_history, their_history, my_score, their_score):
     
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
-    
-    return 'c'
+    n = len(my_history)
+    switch = 75
+    if n == 0:
+        m = 'c'
+    elif n == 1:
+        m = their_history[-1]
+    elif n < switch:
+        if their_history[-1]==their_history[-2]:
+            m = their_history[-1]
+        else:
+            m = 'b'
+    elif n == switch:
+        m = 'b'
+    else:
+        if their_history.count('b') == 0:
+            m = 'b'
+        elif their_history.count('b') < 3:
+            if their_history[-1]==their_history[-2]:
+                m = their_history[-1]
+            else:
+                m = 'b'
+        else:
+            m = 'b'
+    return m
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
