@@ -12,7 +12,6 @@ strategy_description = 'Use history to see if = c then rturn c if not return b'
     
 def move(my_history, their_history, my_score, their_score):
     
-    while True == True: 
         if their_history == 'c':
             return 'c'
         elif their_history.count('c') >= 11 :
