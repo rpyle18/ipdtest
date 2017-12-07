@@ -43,7 +43,7 @@ import pyle
 betray = example1
 collude = example0
 
-modules = [example0, example1, example2, example3, example4, example5, example6, example7, example8, austin, ben, braeden, brayden, caleb, chase, cole, derek, ethan, haley, jacob, jared, jessiria, joseph, kyle, maxwell, merik, morgan, sam, shane, spencer, zachary]
+modules = [example0, example1, example2, example3, example4, example5, example6, example7, example8, austin, ben, braeden, brayden, caleb, chase, cole, derek, ethan, haley, jacob, jared, jessiria, joseph, kyle, maxwell, merik, morgan, sam, shane, spencer, zachary, pyle]
 for module in modules:
     reload(module)
     print ('reloaded',module)
