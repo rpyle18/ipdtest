@@ -11,30 +11,14 @@ strategy_name = 'Playing it safe.'  ###########################
 strategy_description = 'As long as my score is higher I will always collude.'
 
 
-def move(my_history, their_history, my_score, their_score):
+def move(my_history, their_history, my_score, their_score): 
     import random
-    list = ('c', 'b')
+    list = ('b', 'c')
     if my_score > their_score:
-        return 'c'
+        return 'b'
     else:
-        return random.choice(list)
-        if their_score > my_score:
-            return 'b'
-            else:
-                return 'c'
+        random.choice(list)
 
-    
-    #################################################################################################################
-    # Arguements Accepted:  my_history, their_history are strings; my_score, their_score are ints                   #
-    # my_history:           a string with one letter (c or b) per round that has been played with this opponentself.#
-    # their_history:        a string of the same length as history, possibly emptyself                              #
-    # first round:          my_history[0] and their_history[0]                                                      #
-    # most recent round:    my_history[-1] and their_history[-1]                                                    #
-    # Analyze my_history and their_history and/or my_score and their_score                                          #
-    # Make my move:         Returns 'c' or 'b'.                                                                     #
-    # c =                   COLLUDE                                                                                 #
-    # b =                   BETRAY                                                                                  #
-    #################################################################################################################
 
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
