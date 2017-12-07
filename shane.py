@@ -26,13 +26,31 @@ def move(my_history, their_history, my_score, their_score):
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
 
-    while 1 == 1:
-        if their_history != 'c' and their_history != 'b':
-            return 'b'
-        elif their_history == 'c':
-            return 'c'
-        elif their_history == 'b':
-            return 'b'
+    n = len(my_history)
+    switch = 20
+    if n == 0:
+        m = 'c'
+    elif n == 1:
+        m = their_history[-1]
+    elif n < switch:
+        if their_history[-1]==their_history[-2]:
+            m = their_history[-1]
+        else:
+            m = 'b'
+    elif n == switch:
+        m = 'b'
+    else:
+        if their_history.count('b') == 0:
+            m = 'b'
+        elif their_history.count('b') < 3:
+            if their_history[-1]==their_history[-2]:
+                m = their_history[-1]
+            else:
+                m = 'b'
+        else:
+            m = 'b'
+    return m
+
     
     
 def test_move(my_history, their_history, my_score, their_score, result):
