@@ -5,10 +5,10 @@
 #     strategy_description: a string
 #     move: A function that returns 'c' or 'b'
 ####
-
-team_name = 'The name the team gives to itself' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
+import random
+team_name = 'BottomText' # Only 10 chars displayed.
+strategy_name = 'Adapt/alternate w/ history'
+strategy_description = 'adapts to the always betray, collude, and tit for tat, strategies, or betrays after 2 matching inputs otherwise'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
@@ -26,7 +26,51 @@ def move(my_history, their_history, my_score, their_score):
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
     
-    return 'c'
+    if len(my_history) < 6: 
+        rando = random.randint(100, 200)
+        if rando >= 50:
+            return 'b'
+        else:
+            return 'c'
+    else:
+        recent_round_them = their_history[-1]
+        recent_round_me = my_history[-1]
+        #If tit for tat
+        for round in range(len(my_history)-1):
+            if their_history[2] == my_history[1]:
+                if their_history[3] == my_history[2]:
+                    if their_history[4] == my_history[3]:
+                        if their_history[5] == my_history[4]:
+                            choice = random.randint(100, 200)
+                            if choice >= 50:
+                                return 'b'
+                            else:
+                                return 'c'
+            # If always Betraying
+            if their_history[-1] == 'b':
+                if their_history[-2] == 'b':
+                    if their_history[-3] == 'b':
+                        if their_history[-4] == 'b':
+                            if their_history[-5] == 'b':
+                                return 'b'
+            #If always colluding
+            if their_history[-1] == 'c':
+                if their_history[-2] == 'c':
+                    if their_history[-3] == 'c':
+                        if their_history[-4] == 'c':
+                            if their_history[-5] == 'c':
+                                return 'b'
+            else:
+                if their_history[-2] == my_history[-2]:
+                    if their_history[-1] == my_history[-1]:
+                        return 'b'
+                    else:
+                        return 'c'
+                else: 
+                    return 'c'
+                    
+                    
+            
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
@@ -66,3 +110,4 @@ if __name__ == '__main__':
               my_score=0, 
               their_score=0,
               result='b')             
+
