@@ -8,9 +8,24 @@
 
 team_name = 'xtendoclip' 'The name the team gives to itself' # Only 10 chars displayed.
 strategy_name = 'datstick' 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
+strategy_description = 'cool strats'
     
 def move(my_history, their_history, my_score, their_score):
+    if len(my_history) < 3:
+        return 'b'
+    else:
+        if len(my_history) < 10:
+            return 'c'
+    while len(my_history) > 10:
+        if len(my_history) > 20:
+            return 'c'
+        else:
+            if len(my_history) > 25:
+                return 'b'
+    
+    
+    
+    
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.
     
