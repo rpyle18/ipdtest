@@ -18,22 +18,21 @@ def move(my_history, their_history, my_score, their_score):
     Returns 'c' or 'b'. 
     '''
 
-    while 1 == 1:
-        if their_history != 'c' and their_history != 'b':
+    if their_history != 'c' and their_history != 'b':
+        return 'b'
+    while their_history.count('c')< 5:
+        if their_history.count('c') <= 2:
             return 'b'
-        while their_history.count('c')< 5:
-            if their_history.count('c') <= 2:
-                return 'b'
-            elif their_history.count('c') >= 10:
-                return 'c'
-            elif their_history.count('b') > 20:
-                return 'b'
-            elif their_history.count('b') < 2:
-                return 'b'
-        if their_history == 'c':
+        elif their_history.count('c') >= 10:
             return 'c'
-        elif their_history == 'b':
+        elif their_history.count('b') > 20:
             return 'b'
+        elif their_history.count('b') < 2:
+            return 'b'
+    if their_history == 'c':
+        return 'c'
+    elif their_history == 'b':
+        return 'b'
         
         
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
