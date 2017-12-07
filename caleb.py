@@ -21,7 +21,16 @@ def move(my_history, their_history, my_score, their_score):
     while 1 == 1:
         if their_history != 'c' and their_history != 'b':
             return 'b'
-        elif their_history == 'c':
+        while their_history.count('c')< 5:
+            if their_history.count('c') <= 2:
+                return 'b'
+            elif their_history.count('c') >= 10:
+                return 'c'
+            elif their_history.count('b') > 20:
+                return 'b'
+            elif their_history.count('b') < 2:
+                return 'b'
+        if their_history == 'c':
             return 'c'
         elif their_history == 'b':
             return 'b'
