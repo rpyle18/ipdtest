@@ -20,6 +20,7 @@ def move(my_history, their_history, my_score, their_score):
 
     while len(my_history) < 10:
         return 'b'
+
     if their_history[0,1,2,3,4,5,6,7,8,9] == ['c', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b']:
         pickrand = random.randint(0,100)
         if pickrand <= 50:
