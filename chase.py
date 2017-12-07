@@ -11,7 +11,7 @@ strategy_name = 'datstick' 'The name the team gives to this strategy'
 strategy_description = 'cool strats'
     
 def move(my_history, their_history, my_score, their_score):
-    if len(my_history) < 3:
+    '''if len(my_history) < 3:
         return 'b'
     else:
         if len(my_history) < 10:
@@ -22,6 +22,8 @@ def move(my_history, their_history, my_score, their_score):
         else:
             if len(my_history) > 25:
                 return 'b'
+                '''
+    return 'c'
     
     
     
