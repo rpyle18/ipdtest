@@ -18,13 +18,14 @@ def move(my_history, their_history, my_score, their_score):
     Returns 'c' or 'b'. 
     '''
     
-    while 1 == 1:
+    '''while 1 == 1:
         if their_history == 'b':
             return 'c'
         elif their_history == 'c':
             return 'b'
         else:
-            return 'b' 
+            return 'b' '''
+    return 'c'
      
 
             
