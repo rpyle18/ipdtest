@@ -22,13 +22,11 @@ def move(my_history, their_history, my_score, their_score):
         if their_history == 'b':
             return 'c'
         elif their_history == 'c':
-
             return 'b'
         else:
-            return 'b' 
-
-            move = 'b'
-    '''
+            return 'b' '''
+    return 'c'
+     
 
             
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
@@ -41,8 +39,6 @@ def move(my_history, their_history, my_score, their_score):
     # Decide whether to return 'c' or 'b'
 
     # Decide whether to return 'c' or 'b'.
-    
-    return 'c'
 
 
     

@@ -7,8 +7,8 @@
 ####
 
 team_name = 'Pyle'
-strategy_name = ''
-strategy_description = ''
+strategy_name = 'Copy Cat'
+strategy_description = 'Collude on first round and then copy their previous move(s).'
     
 def move(my_history, their_history, my_score, their_score):
     '''Make my move based on the history with this player.
@@ -21,6 +21,11 @@ def move(my_history, their_history, my_score, their_score):
     Returns 'c' or 'b' for collude or betray.
     '''
     
-    # This player always colludes.
-    return 'b'
-    
+    # Collude on first round and then copy their previous move. Then average their last 3 moves.
+    my_move = 'c'
+    if len(their_history) > 0:
+        my_move = their_history[-1]
+    if len(their_history) > 2:
+        if their_history[-3:-1].count('b') > 1:
+            my_move = 'b'
+    return my_move

@@ -7,7 +7,7 @@
 ####
 
 team_name = 'Rat King'
-strategy_name = 'Literal Scum'
+strategy_name = 'Rat boys'
 strategy_description = 'Always betray'
     
 def move(my_history, their_history, my_score, their_score):
@@ -25,11 +25,7 @@ def move(my_history, their_history, my_score, their_score):
     
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
-    n = 0
-    while n < 5:
-        return 'c' and n + 1
-    if n > 5:
-        return 'b'
+    return 'b'
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
