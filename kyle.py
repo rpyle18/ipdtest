@@ -15,6 +15,7 @@ strategy_description = 'If they have betrayed recently then retaliate, if not th
 
 
 def move(my_history, their_history, my_score, their_score):
+    global x
     if x == 1:
         return 'b'
     else:
