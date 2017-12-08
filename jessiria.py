@@ -11,12 +11,30 @@ strategy_name = 'Always Betray on Betray'
 strategy_description = 'this move betrays on every enemy betray move'
     
 def move(my_history, their_history, my_score, their_score):
-    if len(their_history) == 0:
-        return 'c'
-    if their_history[-1] == 'b':
-        return 'b'
-    else:
-        return 'c'
+    for i in their_history:
+        if len(their_history) == 0:
+            return 'c'
+        if their_history[-1] == 'b':
+            return 'b'
+        if their_score -601 >= my_score:
+            return 'c'
+        
+    
+        else:
+            return 'c'
+    
+    
+  
+     
+   
+   
+    
+           
+       
+
+  
+  
+  
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.
     
