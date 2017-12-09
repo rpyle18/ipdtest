@@ -6,22 +6,24 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'Not good' # Only 10 chars displayed.
-strategy_name = '3rd place is cool '
-strategy_description = 'Use history to alternate'
+team_name = 'Soy Austin' # Only 10 chars displayed.
+strategy_name = 'We\'re playing golf right?'
+strategy_description = 'Use history to see if = c then rturn c if not return b'
     
 def move(my_history, their_history, my_score, their_score):
     
-    if their_history == 'c':
-        return 'b'
-    else:
-        return 'c'
+        if their_history == 'c':
+            return 'c'
+        elif their_history.count('c') >= 11 :
+            return 'b'
+        else:
+            return 'b'
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
     from this module. Prints error if return value != result.
-    Returns True or False, dpending on whether result was as expected.
+    Returns True or False, dpending on whether result was as expected .
     '''
     real_result = move(my_history, their_history, my_score, their_score)
     if real_result == result:

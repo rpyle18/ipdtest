@@ -1,4 +1,5 @@
 import random
+x = 0
 ####
 # Each team's file must define four tokens:
 #     team_name: a string
@@ -7,22 +8,29 @@ import random
 #     move: A function that returns 'c' or 'b'
 ####
 
+
 team_name = 'Kyle' # Only 10 chars displayed.
 strategy_name = 'Partially Random'
 strategy_description = 'If they have betrayed recently then retaliate, if not then randomly betryay 10% of the time'
-    
+
+
 def move(my_history, their_history, my_score, their_score):
-    if their_history[-10:] == 'b':
-        if my_score - 600 >= their_score:
-            return 'c'
-        else:
-            if random.random()<0.1:
-                return 'b'
-            else:
-                return 'c'
+    global x
+    if x == 1:
+        return 'b'
     else:
-        return 'c'
-    
+        if their_history[-10:] == 'b':
+            return 'b'
+        else:
+            
+            if my_score - 601 >= their_score:
+                return 'c'
+            else:
+                if random.random()<0.05:
+                    x = 1
+                    return 'b'
+                else:
+                    return 'c'
     
     
     
