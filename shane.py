@@ -27,7 +27,7 @@ def move(my_history, their_history, my_score, their_score):
     # Decide whether to return 'c' or 'b'.
 
     n = len(my_history)
-    switch = 20
+    switch = 50
     if n == 0:
         m = 'c'
     elif n == 1:
