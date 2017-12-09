@@ -27,7 +27,11 @@ def move(my_history, their_history, my_score, their_score):
     # Decide whether to return 'c' or 'b'.
     
     if len(my_history) < 6: 
-        return 'b'
+        rando = random.randint(100, 200)
+        if rando >= 50:
+            return 'b'
+        else:
+            return 'c'
     else:
         recent_round_them = their_history[-1]
         recent_round_me = my_history[-1]
@@ -43,18 +47,18 @@ def move(my_history, their_history, my_score, their_score):
                             else:
                                 return 'c'
             # If always Betraying
-            if their_history[1] == 'b':
-                if their_history[2] == 'b':
-                    if their_history[3] == 'b':
-                        if their_history[4] == 'b':
-                            if their_history[5] == 'b':
+            if their_history[-1] == 'b':
+                if their_history[-2] == 'b':
+                    if their_history[-3] == 'b':
+                        if their_history[-4] == 'b':
+                            if their_history[-5] == 'b':
                                 return 'b'
             #If always colluding
-            if their_history[1] == 'c':
-                if their_history[2] == 'c':
-                    if their_history[3] == 'c':
-                        if their_history[4] == 'c':
-                            if their_history[5] == 'c':
+            if their_history[-1] == 'c':
+                if their_history[-2] == 'c':
+                    if their_history[-3] == 'c':
+                        if their_history[-4] == 'c':
+                            if their_history[-5] == 'c':
                                 return 'b'
             else:
                 if their_history[-2] == my_history[-2]:
@@ -106,3 +110,4 @@ if __name__ == '__main__':
               my_score=0, 
               their_score=0,
               result='b')             
+

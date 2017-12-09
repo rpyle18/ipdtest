@@ -12,17 +12,21 @@ strategy_name = 'Partially Random'
 strategy_description = 'If they have betrayed recently then retaliate, if not then randomly betryay 10% of the time'
     
 def move(my_history, their_history, my_score, their_score):
-    if their_history[-10:] == 'b':
-        if my_score - 600 >= their_score:
-            return 'c'
-        else:
-            if random.random()<0.1:
-                return 'b'
-            else:
-                return 'c'
+    x = 0
+    if x == 1:
+        return 'b'
     else:
-        return 'c'
-    
+        if their_history[-10:] == 'b':
+            if my_score - 601 >= their_score:
+                return 'c'
+            else:
+                if random.random()<0.05:
+                    x = 1
+                    return 'b'
+                else:
+                    return 'c'
+        else:
+            return 'c'
     
     
     
