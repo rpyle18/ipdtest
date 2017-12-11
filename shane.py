@@ -1,3 +1,4 @@
+import random
 ####
 # Each team's file must define four tokens:
 #     team_name: a string
@@ -26,30 +27,34 @@ def move(my_history, their_history, my_score, their_score):
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
 
-    n = len(my_history)
-    switch = 50
-    if n == 0:
-        m = 'c'
-    elif n == 1:
-        m = their_history[-1]
-    elif n < switch:
-        if their_history[-1]==their_history[-2]:
-            m = their_history[-1]
+    switch_1 = 50
+    switch_2 = 100
+    answer = 'b'
+    x = len(my_history)
+    if x == 0:
+        answer = 'b'
+    elif x == 1:
+        z = random.randint(1, 10000)
+        if z > 10:
+            answer = 'b'
         else:
-            m = 'b'
-    elif n == switch:
-        m = 'b'
-    else:
-        if their_history.count('b') == 0:
-            m = 'b'
-        elif their_history.count('b') < 3:
-            if their_history[-1]==their_history[-2]:
-                m = their_history[-1]
+            answer = 'c'
+    elif x < switch_1:
+        if their_history[-1] == my_history[-1]:
+            answer = their_history[-2]
+        else:
+            answer = 'b'
+    elif x == switch_1 and x < switch_2:
+        if their_history[-1] == their_history[-2]:
+            y = random.randint(1, 1000)
+            if y > 100:
+                answer = 'b'
             else:
-                m = 'b'
-        else:
-            m = 'b'
-    return m
+                answer = 'c'
+    elif x == switch_2:
+        if their_history[-2] == my_history[-1]:
+            answer == 'c'
+    return answer
     
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
