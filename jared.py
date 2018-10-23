@@ -6,7 +6,7 @@
 #     move: A function that returns 'c' or 'b'
 ####
 import random
-team_name = 'Jeff' # Only 10 chars displayed.
+team_name = 'Jared' # Only 10 chars displayed.
 strategy_name = 'His name is Jeff'
 strategy_description = 'checks if it is playing against tit for tat and decides on a strategy'
     
