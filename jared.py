@@ -7,7 +7,7 @@
 ####
 import random
 team_name = 'Jared' # Only 10 chars displayed.
-strategy_name = 'His name is Jeff'
+strategy_name = 'His name is Jared'
 strategy_description = 'checks if it is playing against tit for tat and decides on a strategy'
     
 def move(my_history, their_history, my_score, their_score):
